@@ -1,10 +1,118 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>Welcome!</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Il mio Portfolio</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Helvetica Neue', sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, #ff6ec4, #7873f5, #4ade80, #0ea5e9);
+      background-size: 400% 400%;
+      animation: gradient 20s ease infinite;
+      z-index: -1;
+      filter: blur(60px);
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      text-align: center;
+      padding: 2rem;
+      backdrop-filter: blur(20px);
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+
+    .tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+
+    .tech {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.95rem;
+      transition: background 0.3s;
+    }
+
+    .tech:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+  </style>
 </head>
 <body>
-  <h1>Paulina Lichota - Front end developer</h1>
+  <div class="container">
+    <h1>Ciao, sono una Web Developer</h1>
+    <p>Studentessa di 42 Firenze. Costruisco interfacce moderne con Vue, JavaScript, e tante altre tecnologie.</p>
+    <div class="tech-list">
+      <div class="tech">Vue</div>
+      <div class="tech">HTML</div>
+      <div class="tech">CSS</div>
+      <div class="tech">Sass</div>
+      <div class="tech">JavaScript</div>
+      <div class="tech">TypeScript</div>
+      <div class="tech">Express</div>
+      <div class="tech">PHP</div>
+      <div class="tech">Docker</div>
+      <div class="tech">GitHub</div>
+      <div class="tech">Bash</div>
+      <div class="tech">C</div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 - Creato con ❤️ da una studentessa di 42 Firenze
+  </footer>
 </body>
 </html>
